@@ -1,27 +1,70 @@
 <?php
-
-if (!isset($fName)) { $fName = '' ;}
-if (!isset($lName)) { $lName = '' ;}
-if (!isset($uName)) { $uName = '' ;}
-if (!isset($loginUName)) { $loginUName = '' ;}
-if (!isset($email)) { $email = '' ;}
-if (!isset ($password)) { $password="";}
-if (!isset ($loginPassword)) { $loginPassword="";}
-if (!isset($err['fName'])) { $err['fName']="";}
-if (!isset($err['lName'])) { $err['lName']="";}
-if (!isset($err['uName'])) { $err['uName']="";}
-if (!isset($err['noEmail'])) { $err['noEmail']="";}
-if (!isset($err['email'])) { $err['email']="";}
-if (!isset($err['invalidEmail'])) { $err['invalidEmail']="";}
-if (!isset($err['NameTaken'])) { $err['NameTaken']="";}
-if (!isset($err['emailTaken'])) { $err['emailTaken']="";}
-if (!isset($err['shortPass'])) { $err['shortPass']="";}
-if (!isset($err['lcasePass'])) { $err['lcasePass']="";}
-if (!isset($err['ucasePass'])) { $err['ucasePass']="";}
-if (!isset($err['digPass'])) { $err['digPass']="";}
-if (!isset($err['uNamefirstchar'])) { $err['uNamefirstchar']="";}
-if (!isset($err['lNamefirstchar'])) { $err['lNamefirstchar']="";}
-if (!isset($err['fNamefirstchar'])) { $err['fNamefirstchar']="";}
+if (!isset($fName)) {
+    $fName = '';
+}
+if (!isset($lName)) {
+    $lName = '';
+}
+if (!isset($uName)) {
+    $uName = '';
+}
+if (!isset($loginUName)) {
+    $loginUName = '';
+}
+if (!isset($email)) {
+    $email = '';
+}
+if (!isset($password)) {
+    $password = "";
+}
+if (!isset($loginPassword)) {
+    $loginPassword = "";
+}
+if (!isset($err['fName'])) {
+    $err['fName'] = "";
+}
+if (!isset($err['lName'])) {
+    $err['lName'] = "";
+}
+if (!isset($err['uName'])) {
+    $err['uName'] = "";
+}
+if (!isset($err['noEmail'])) {
+    $err['noEmail'] = "";
+}
+if (!isset($err['email'])) {
+    $err['email'] = "";
+}
+if (!isset($err['invalidEmail'])) {
+    $err['invalidEmail'] = "";
+}
+if (!isset($err['NameTaken'])) {
+    $err['NameTaken'] = "";
+}
+if (!isset($err['emailTaken'])) {
+    $err['emailTaken'] = "";
+}
+if (!isset($err['shortPass'])) {
+    $err['shortPass'] = "";
+}
+if (!isset($err['lcasePass'])) {
+    $err['lcasePass'] = "";
+}
+if (!isset($err['ucasePass'])) {
+    $err['ucasePass'] = "";
+}
+if (!isset($err['digPass'])) {
+    $err['digPass'] = "";
+}
+if (!isset($err['uNamefirstchar'])) {
+    $err['uNamefirstchar'] = "";
+}
+if (!isset($err['lNamefirstchar'])) {
+    $err['lNamefirstchar'] = "";
+}
+if (!isset($err['fNamefirstchar'])) {
+    $err['fNamefirstchar'] = "";
+}
 ?>
 
 
@@ -51,7 +94,8 @@ if (!isset($err['fNamefirstchar'])) { $err['fNamefirstchar']="";}
                         <label>First Name:</label>
 
                         <input type="text" name="fName" value="<?php echo htmlspecialchars($fName); ?>">
-                        <label class="err"><?php echo htmlspecialchars($err['fName']);
+                        <label class="err"><?php
+echo htmlspecialchars($err['fName']);
 echo htmlspecialchars($err['fNamefirstchar']);
 ?></label>
 
@@ -59,7 +103,8 @@ echo htmlspecialchars($err['fNamefirstchar']);
                         <label>Last Name:</label>
 
                         <input type="text" name="lName" value="<?php echo htmlspecialchars($lName); ?>">
-                        <label class="err"><?php echo htmlspecialchars($err['lName']);
+                        <label class="err"><?php
+echo htmlspecialchars($err['lName']);
 echo htmlspecialchars($err['lNamefirstchar'])
 ?></label><br>
 
@@ -88,9 +133,6 @@ echo htmlspecialchars($err['digPass']);
                         <p>Have an Account? <a href="LogIn.php"> Login Now!</a></p>
                     </div>
                 </div>
-
-
-
             </div>
         </form>
     </body>
