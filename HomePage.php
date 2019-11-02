@@ -48,16 +48,7 @@
     </table>
 
     </section>
-<!--        <h3> <p>
-            
-                I my name is Paula Miller. I am the crate of Paula's Sweets.
-                <br>
-                I have opened my online backer for the past 2 years. We have very many different   kinda of gooodies<br>
-                 
-            </p> 
-        
-       </h2>
-        </div>-->
+
     
       <ul class="section">
                  <li>  <img src="images/Cupcake.jpg" alt="Avatar" height="100" width="80"> </li>
