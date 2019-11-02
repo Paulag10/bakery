@@ -20,9 +20,7 @@
     
     <div id ="col_1" role="main">
         <section>
-        <!-- display a table of products -->
-        
-        <table>
+     <table>
 
         <tr>
             <td  >
