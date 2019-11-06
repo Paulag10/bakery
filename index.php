@@ -3,6 +3,9 @@
 require 'user_db.php';
 require 'DatabaseConnection.php';
 require 'User.php';
+require 'SweetTypes.php';
+require 'Sweets.php';
+
 
 
 session_start();
@@ -110,7 +113,8 @@ switch ($action) {
         }
         die();
         break;
-
+        
+    
   
     case 'viewAllUsers':
 
@@ -128,5 +132,9 @@ switch ($action) {
         include 'ConfirmDelete.php';
         break;
         die();
-}
+        
+        
+}  
 ?>
+
+

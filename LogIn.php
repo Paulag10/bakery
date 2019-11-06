@@ -18,28 +18,26 @@ if (!isset($loginUName)) { $loginUName = '' ;}
     <body>
        
 
+    
+
         <form action="index.php" method="POST">
              <input type="hidden" name="action" value="logIn" />
-            <div class="main-layouts wrapper">
-                <h1> LogIn <img src="images/Cupcake.jpg" alt="Avatar" class="avatars">
-                </h1>
-               <div class="main-layouts wrapper">
-                    <div class="agileits-top">
-                        <label> User Name </label>
-                        <input type="text" name="loginUName" required><br>
-
-
-                        <label> Password </label>
-                         <form action="index.php" method="POST">
-             <input type="hidden" name="action" value="logIn" />
-                        <input type="password" name="loginPassword">
-                <input type="submit"  value="login">
-                         </form>
-                    </div>
-
-
+              <div class="main-agileinfo">
+                <div class="agileits-top">
+                    <lable> User Name </lable>
+                    <input class="forms" type="text" name="loginUName" required><br>
+                    
+                    <label> Password </label> 
+                    <input class="forms" type="password" name="loginPassword" required><br>
+                    
+                    <input class="sub" type="submit" value="Submit"><br>
+                    <p> Not Yet a member!
+                        <a href="index.php?action=register"> Join Us </a></p>
                 </div>
-            </div>
+                </div>
+
+        </form>
+
         </form>
     </body>
 </html>

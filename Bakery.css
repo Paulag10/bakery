@@ -9,14 +9,14 @@ html, body, form{
 }
 
 body {
-    background: blueviolet;
+    background:#EEF1EC;
     font-family:  sans-serif;
 }
 
 h1 {
     font-size: 3em;
     text-align: center;
-    color: #fff;
+    color: darkblue;
     font-weight: 100;
     letter-spacing: 4px;
     font-family: sans-serif;
@@ -60,7 +60,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 input[type="submit"] {
     font-size: .9em;
     color: #fff;
-    background: #76b852;
+    background: lightgreen;
     outline: none;
     border: 1px solid #76b852;
     cursor: pointer;
@@ -166,4 +166,20 @@ img {vertical-align: middle;}
   margin: auto;
   width: 50%;
 padding: 5px;
+}
+.sub{
+     font-size: .9em;
+    color: #fff;
+    background: #76b852;
+    outline: none;
+    border: 1px solid #76b852;
+    cursor: pointer;
+    padding: 0.9em;
+    width: 100%;
+    margin: 2em 0;
+    letter-spacing: 4px;
+}
+
+.sub :hover{
+    background: #8DC26F;
 }
