@@ -5,6 +5,7 @@ require 'DatabaseConnection.php';
 require 'User.php';
 require 'SweetTypes.php';
 require 'Sweets.php';
+require 'sweetDB.php';
 
 
 
@@ -114,7 +115,26 @@ switch ($action) {
         die();
         break;
         
-    
+    case 'list_products':
+        $sweetType = filter_input(INPUT_GET, 'categoryID', FILTER_VALIDATE_INT);
+        if ($sweetType == 1) {
+            $$sweetTypes = sweetDB::get_sweetTypes();
+            $sweets = sweetDB::get_sweetsType($sweetType);
+            include('Profile.php');
+        } else if ($sweetType == 2) {
+
+            $sweetTypes = sweetDB::get_sweetTypes();
+            $sweets = sweetDB::get_sweetsType($sweetType);
+            include('Profile.php');
+        } else {
+            $sweetType == 3;
+            $sweetTypes = sweetDB::get_sweetTypes();
+            $sweets = sweetDB::get_sweetsType($sweetType);
+            include('Profile.php');
+        }
+        break;
+        die();
+
   
     case 'viewAllUsers':
 
