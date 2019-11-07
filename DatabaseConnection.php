@@ -2,7 +2,7 @@
 
 class DatabaseConnection {
   
-    private static $dsn = 'mysql:host=localhost;dbname=bakery';
+    private static $dsn = 'mysql:host=localhost;dbname=bakery2';
     private static $username = 'root';
     private static $password = '';
     private static $db;
