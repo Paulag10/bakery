@@ -3,8 +3,8 @@
 require 'user_db.php';
 require 'DatabaseConnection.php';
 require 'User.php';
-require 'SweetTypes.php';
-require 'Sweets.php';
+//require 'SweetTypes.php';
+//require 'Sweets.php';
 require 'sweetDB.php';
 
 
