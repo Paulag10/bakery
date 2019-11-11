@@ -54,17 +54,43 @@ public static function get_sweetsType($sweetTypeID){
      $db = DatabaseConnection::getDB();
     $query = '
         SELECT *
-        FROM products 
-           INNER JOIN categories 
-           ON products.categoryID = categories.categoryID
-        WHERE products.categoryID = :category_id';
+        FROM sweets 
+           INNER JOIN sweetstype 
+           ON sweets.sweetTypeID = sweetstype.sweetTypeID
+        WHERE sweets.sweetTypeID = :sweetTypeID';
     
         $statement = $db->prepare($query);
-        $statement->bindValue(':category_id', $sweetTypeID);
+        $statement->bindValue(':sweetTypeID', $sweetTypeID);
         $statement->execute();
         $result = $statement->fetchAll();
         $statement->closeCursor();
         return $result;
     
 }
-}
+
+    public static function getSweetView($sweetsID) {
+         $db = DatabaseConnection::getDB();
+    $query = 'SELECT *
+              FROM sweets
+            Where sweetsID = :sweetsID';
+    
+         $statement = $db->prepare($query);
+        $statement->bindValue(':sweetsID', $sweetsID);
+        $statement->execute();
+        $result = $statement->fetch();
+        $statement->closeCursor();
+        return $result;
+    }
+
+    public static function getAllEvents() {
+        $db = DatabaseConnection::getDB();
+       $query = 'SELECT * FROM events';
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $results = $statement->fetchAll();
+        $statement->closeCursor();
+       
+        return $results;
+     }
+    }
+

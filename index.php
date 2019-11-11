@@ -115,21 +115,21 @@ switch ($action) {
         die();
         break;
         
-    case 'list_products':
+    case 'list_sweets':
         $sweetType = filter_input(INPUT_GET, 'SweetTypeID', FILTER_VALIDATE_INT);
         if ($sweetType == 1) {
-            $$sweetTypes = sweetDB::get_sweetTypes();
-            //$sweets = sweetDB::get_sweetsType($sweetType);
+            $sweetTypes = sweetDB::get_sweetTypes();
+            $sweets = sweetDB::get_sweetsType($sweetType);
             include('Profile.php');
         } else if ($sweetType == 2) {
 
             $sweetTypes = sweetDB::get_sweetTypes();
-            //$sweets = sweetDB::get_sweetsType($sweetType);
+            $sweets = sweetDB::get_sweetsType($sweetType);
             include('Profile.php');
         } else {
             $sweetType == 3;
             $sweetTypes = sweetDB::get_sweetTypes();
-           // $sweets = sweetDB::get_sweetsType($sweetType);
+            $sweets = sweetDB::get_sweetsType($sweetType);
             include('Profile.php');
         }
         break;
@@ -144,7 +144,22 @@ switch ($action) {
         break;
 
 
-       
+    case 'view_sweets':
+         $sweetTypes = sweetDB::get_sweetTypes();
+        $sweetsID = filter_input(INPUT_GET, 'sweetsID', FILTER_VALIDATE_INT);
+        $sweet = sweetDB::getSweetView($sweetsID);
+           include('Profile_view.php');
+        
+        break;
+        die();
+        
+    case 'events':
+        
+      $event = sweetDB::getAllEvents();
+        include 'events.php';
+        
+        break;
+        die();
     case 'delete_User':
         $user_id = filter_input(INPUT_POST, 'uName');
         echo $user_id;

@@ -6,21 +6,31 @@
 
         <title>Paula's Sweets </title>
         <link href="Bakery.css" rel="stylesheet"/>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
 
     <body>
         <main>
             <form action="index.php">
-                <h1>Sweet Shop </h1>
-                <aside>
+                <div class="jumbotron jumbotron-fluid">
+    <h1>Sweet Shop</h1>      
+    </div>
+               <aside>
 
 
                     <nav>
                         <ul>
+                             
                             <li><a href="HomePage.php">Log out</a></li>
-                            <?php foreach ($sweetTypes as $sweetType) : ?>
+                            <li><a href="ProfileHome.php">Home</a></li>
+                             <?php foreach ($sweetTypes as $sweetType) : ?>
                                 <li>
-                                    <a href="?action=list_products&amp;SweetTypeID=<?php echo $sweetType->getSweetTypeID(); ?>">
+                                    <a href="?action=list_sweets&amp;SweetTypeID=<?php echo $sweetType->getSweetTypeID(); ?>">
                                         <?php echo $sweetType->getSweetTypeName(); ?>
                                     </a>
                                 </li>
@@ -30,10 +40,10 @@
                 </aside>
                 <section>
 
-
-                    <table>
-
-                        <tr>
+                        <table class="table table-striped">
+    
+    <tbody>
+       <tr>
                             <?php if (count($sweets) == 0) : ?>
                             <ul><li>Select a Sweet Treat.</li></ul>
                             <div class="center">
@@ -43,21 +53,26 @@
                             </div>
 
                         <?php else: ?>
+                           
                             <tr>
                                 <?php foreach ($sweets as $sweet) : ?>
-                                <tr>
-                                <a href="?action=view_product&amp;product_id=<?php echo $sweet['productID']; ?>"><br> <br> <br>
-                                   <?php echo $sweet['productName']; ?><br>
-                                    <img src="images/<?php echo htmlspecialchars($sweet['productCode']); ?>.jpg"
+                
+               <td>   <a href="?action=view_sweets&amp;sweetsID=<?php echo $sweet['sweetsID']; ?>"><br> <br> <br>
+                      <h3> <?php echo $sweet['sweetsName']; ?><br></h3>
+                       <td>  <?php echo $sweet['description']; ?></td>
+                      
+                       <td> <img src="images/<?php echo htmlspecialchars($sweet['sweetsCode']); ?>.jpg"</td>
 
-                                </a>
-                                </tr>
-                            <?php endforeach; ?>
-                            </tr>
+                                </a></td>
+             
+              
+               
+            </tr>
+            <?php endforeach; ?>
                         <?php endif; ?>
-                    </table>
-                    </main>    
-                    <footer></footer>
-                    </body>
-                    </html>
+    </tbody>
+  </table>
+</div>
+
+ </html>
 

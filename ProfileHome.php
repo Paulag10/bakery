@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
+
+<!--To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 
-Source https://www.w3schools.com/howto/howto_js_slideshow.asp(For the Slide Show)
--->
+Source https://www.w3schools.com/howto/howto_js_slideshow.asp(For the Slide Show)-->
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -21,9 +21,9 @@ Source https://www.w3schools.com/howto/howto_js_slideshow.asp(For the Slide Show
 
                 <ul>
 
-                    <li><a href="index.php?action=list_products"> View Sweets  </a></li>
+                    <li><a href="index.php?action=list_sweets"> View Sweets  </a></li>
                     <li><a href="index.php?action=events"> View Events  </a></li>
-                    <li><a href="ContactU.php">Contact Us</a></li>
+<!--                    <li><a href="ContactU.php">Contact Us</a></li>-->
                 </ul>
             </ul>
         </aside>
@@ -100,3 +100,5 @@ Source https://www.w3schools.com/howto/howto_js_slideshow.asp(For the Slide Show
         setTimeout(showSlides, 2000);
     }
 </script>
+
+
