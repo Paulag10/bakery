@@ -7,7 +7,15 @@
         <title>Sweets</title>
         <link rel="stylesheet" type="text/css" href="Bakery.css" />
     </head>
+    <h1> Users <img src="images/Cupcake.jpg" alt="Avatar" class="avatars">
+                </h1>
 
+                        <ul>
+                             
+                            
+                             <li><a href="Admin_view.php"> Home </a></li>
+                  </ul>
+    <div class="center">
       <table>
             <tr>
                 <th>User Name</th>
@@ -30,4 +38,5 @@
             </tr>
             <?php endforeach; ?>
         </table>
+    </div>
 </html>
