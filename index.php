@@ -129,6 +129,9 @@ switch ($action) {
         } else {
             $sweetType == 3;
             $sweetTypes = sweetDB::get_sweetTypes();
+            $_SESSION['SweetTypeID'] = $sweetType;
+             
+          
             $sweets = sweetDB::get_sweetsType($sweetType);
             include('Profile.php');
         }
@@ -145,9 +148,10 @@ switch ($action) {
 
 
     case 'view_sweets':
-         $sweetTypes = sweetDB::get_sweetTypes();
+      
         $sweetsID = filter_input(INPUT_GET, 'sweetsID', FILTER_VALIDATE_INT);
         $sweet = sweetDB::getSweetView($sweetsID);
+        
            include('Profile_view.php');
         
         break;
