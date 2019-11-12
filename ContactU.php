@@ -10,26 +10,26 @@ and open the template in the editor.
         <link   href="Bakery.css" rel="stylesheet">
         <title></title>
     </head>
-     <body>
-      
+    <body>
+
         <form>
             <h1> Contact Me </h1>
-              <ul>
-                            <li><a href="HomePage.php"> Home </a></li>
-                            
-                  </ul>
+            <ul>
+                <li><a href="HomePage.php"> Home </a></li>
 
-            <div class="main-layouts wrapper">
-                
-                <div class="main-agileinfo">
-                    <div class="agileits-top">
+            </ul>
+
+            <div>
+
+                <div>
+                    <div class="center">
                         <label> Phone Number </label>
                         <p> (402) 564 - 2546 </p>
 
 
                         <label> Email </label>
                         <p> SweetShop@gmail.com </p>
-                
+
                     </div>
 
 
@@ -37,12 +37,5 @@ and open the template in the editor.
             </div>
         </form>
     </body>
-<!--    <body>
-        <p>
-            
-            <label>Phone Number</label> (402) 456 - 2345
-            
-            <label  Email:</label> SweetsShop@gmail.com
-        </p>
-    </body>-->
+    
 </html>

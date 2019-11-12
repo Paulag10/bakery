@@ -1,4 +1,6 @@
-
+<!-- Source         https://www.w3schools.com/html/html_youtube.asp
+ Murach's PHP and MySQL (3rd Edition)-->
+ 
 <!DOCTYPE html>
 <html>
 
@@ -49,7 +51,7 @@
                             <div class="center">
                                 <iframe width="420" height="345" src="https://www.youtube.com/embed/YsxtAMlWfj8?autoplay=1">
                                 </iframe>
-<!--                       Source         https://www.w3schools.com/html/html_youtube.asp-->
+
                             </div>
 
                         <?php else: ?>
@@ -69,7 +71,7 @@
                
             </tr>
             <?php endforeach; ?>
-                        <?php endif; ?>
+         <?php endif; ?>
     </tbody>
   </table>
 </div>

@@ -1,5 +1,9 @@
-
+<!-- Source         https://www.w3schools.com/html/html_youtube.asp
+ Murach's PHP and MySQL (3rd Edition)
+w3schoolbootstrap 
+-->
 <?php
+
    
     $sweetType = $sweet['sweetTypeID'];
     $sweetsCode = $sweet['sweetsCode'];
@@ -7,7 +11,7 @@
     $description = $sweet['description'];
     $list_price = $sweet['listPrice'];
     $tax = .50;
-  $unit_price = $list_price + $tax;
+ $unit_price = $list_price + $tax;
  $unit_price_f = number_format($unit_price, 2);
 
    
@@ -51,7 +55,7 @@
                 </option>
                 <?php endfor; ?>
                 </div>
-        <input type="submit" value="Add to Cart" />
+        <input type="submit" value="Your goddie" />
         </div>
 </div>
     </form>
