@@ -179,7 +179,6 @@ switch ($action) {
         $eventDiscription = filter_input(INPUT_POST, 'eventDiscription');
         $eventLocation = filter_input(INPUT_POST, 'eventLocation');
         $eventCost = filter_input(INPUT_POST, 'eventCost');
-       // $users = $_SESSION['uName'];
         if (empty($eventDiscription) || empty($eventName) ||
                 empty($dinner) || empty($eventLocation) || empty($eventCost)) {
             
