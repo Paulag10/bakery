@@ -26,7 +26,7 @@
                     <nav>
                         <ul>
                              
-                            <li><a href="HomePage.php">Log out</a></li>
+                           <li><a href="index.php?action=logOut">Log Out</a></li>
                             <li><a href="ProfileHome.php">Home</a></li>
                              <?php foreach ($sweetTypes as $sweetType) : ?>
                                 <li>

@@ -20,10 +20,10 @@ Source https://www.w3schools.com/howto/howto_js_slideshow.asp(For the Slide Show
 
 
                 <ul>
-
+                    <li><a href="index.php?action=logOut">Log Out</a></li>
                     <li><a href="index.php?action=list_sweets"> View Sweets  </a></li>
                     <li><a href="index.php?action=events"> View Events  </a></li>
-<!--                    <li><a href="ContactU.php">Contact Us</a></li>-->
+           
                 </ul>
             </ul>
         </aside>

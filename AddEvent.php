@@ -36,13 +36,13 @@
                     <br>
                    
                     </tr>
-                    <tr><!--https://www.w3schools.com/tags/att_input_required.asp-->
+                    <tr>
                         <td><input type="text" name="eventCode" required></td><br>
                     <td><input type="text" name="eventName" required></td><br>
                     <td><input type="text" name="eventDiscription" required></td><br>
                     <td><input type="text" name="eventLocation" required></td><br><br>
                     <td><input type="number" name="eventCost" required></td><br><br>
-                    <td>  <input type="button" value="Add event" name="event"> <br> </td>
+                    <td>  <input type="submit" value="Add event" name="event"> <br> </td>
             
                     </tr>
                 </table>

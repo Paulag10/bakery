@@ -168,7 +168,34 @@ switch ($action) {
         break;
         die();
         
+    case 'add_event':
+         
+        $eventCode = filter_input(INPUT_POST, 'eventCode');
+        $eventName = filter_input(INPUT_POST, 'eventName');
+        $eventDiscription = filter_input(INPUT_POST, 'eventDiscription');
+        $eventLocation = filter_input(INPUT_POST, 'eventLocation');
+        $eventCost = filter_input(INPUT_POST, 'eventCost');
+       // $users = $_SESSION['uName'];
+        if (empty($eventDiscription) || empty($eventName) ||
+                empty($dinner) || empty($eventLocation) || empty($eventCost)) {
+            
+        } else {
+            $f = new event($eventCode, $eventName, $eventDiscription, $eventLocation, $eventCost);
+            user_db::addEvent($f);
+        }
+        include 'Admin_view.php';
+        die();
+        break;
+        break;
+        die();
         
+        
+    case 'logOut':
+         $_SESSION['uName'] = "";
+         include 'HomePage.php';
+        
+        break;
+        die();
 }  
 ?>
 

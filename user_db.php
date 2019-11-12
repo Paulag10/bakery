@@ -126,6 +126,25 @@ class user_db {
     $statement->closeCursor();
 }
 
+public static function addEvent($f) {
+     $db = DatabaseConnection::getDB();
+
+        $query = 'INSERT INTO events
+                     (eventCode, eventName, eventDiscription, eventLocation, eventCost)
+                  VALUES
+                     (:eventCode, :eventName, :eventDiscription, :eventLocation, :eventCost)';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':eventCode', $f->getEventCode());
+        $statement->bindValue(':eventName', $f->getEventName());
+        $statement->bindValue(':eventDiscription', $f->getEventDiscription());
+        $statement->bindValue(':eventLocation', $f->getEventLocation());
+        $statement->bindValue(':eventCost', $f->getEventCost());
+   
+
+        $statement->execute();
+        $statement->closeCursor();
+    }
+
 }
 
 
