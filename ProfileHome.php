@@ -5,6 +5,10 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 
 Source https://www.w3schools.com/howto/howto_js_slideshow.asp(For the Slide Show)-->
+<!-- Source         https://www.w3schools.com/html/html_youtube.asp
+ Murach's PHP and MySQL (3rd Edition)
+w3schoolbootstrap 
+-->
 
 <html>
     <head>
