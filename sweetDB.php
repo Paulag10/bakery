@@ -36,18 +36,7 @@ class sweetDB {
           return null;
       }
     }
-    
-//     $db = DatabaseConnection::getDB();
-//    $query = 'SELECT * FROM categories
-//              ORDER BY categoryID';
-//   
-//        $statement = $db->prepare($query);
-//        $statement->execute();
-//        $result = $statement->fetchAll();
-//        $statement->closeCursor();
-//        return $result;
-//   
-//}
+ 
 
 public static function get_sweetsType($sweetTypeID){
     
