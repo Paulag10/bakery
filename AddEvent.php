@@ -5,7 +5,7 @@
     <html>
         <head>
             <meta charset="UTF-8">
-            <title>Food Tracker</title>
+            <title>Add Events</title>
             <link rel="stylesheet" type="text/css" href="Bakery.css"/>
         </head>
         <body>
