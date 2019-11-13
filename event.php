@@ -14,8 +14,8 @@
 class event {
     private $eventID, $eventName, $eventCode, $eventLocation, $eventTime, $eventDiscription, $eventCost;
     
-    function __construct($eventID, $eventName, $eventCode, $eventLocation, $eventTime, $eventDiscription, $eventCost) {
-        $this->eventID = $eventID;
+    function __construct($eventName, $eventCode, $eventLocation, $eventTime, $eventDiscription, $eventCost) {
+      
         $this->eventName = $eventName;
         $this->eventCode = $eventCode;
         $this->eventLocation = $eventLocation;

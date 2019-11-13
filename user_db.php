@@ -130,14 +130,15 @@ public static function addEvent($f) {
      $db = DatabaseConnection::getDB();
 
         $query = 'INSERT INTO events
-                     (eventCode, eventName, eventDiscription, eventLocation, eventCost)
+                     (eventName, eventCode, eventLocation, eventTime, eventDiscription, eventCost )
                   VALUES
-                     (:eventCode, :eventName, :eventDiscription, :eventLocation, :eventCost)';
+                     (:eventName, :eventCode, :eventLocation, :eventTime, :eventDiscription, :eventCost)';
         $statement = $db->prepare($query);
-        $statement->bindValue(':eventCode', $f->getEventCode());
         $statement->bindValue(':eventName', $f->getEventName());
-        $statement->bindValue(':eventDiscription', $f->getEventDiscription());
+        $statement->bindValue(':eventCode', $f->getEventCode());
         $statement->bindValue(':eventLocation', $f->getEventLocation());
+        $statement->bindValue(':eventTime', $f->getEventTime());
+        $statement->bindValue(':eventDiscription', $f->getEventDiscription());
         $statement->bindValue(':eventCost', $f->getEventCost());
    
 

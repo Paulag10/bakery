@@ -4,8 +4,8 @@ require 'user_db.php';
 require 'DatabaseConnection.php';
 require 'User.php';
 require 'SweetType.php';
-//require 'Sweets.php';
 require 'sweetDB.php';
+require 'event.php';
 
 
 
@@ -114,7 +114,7 @@ switch ($action) {
         }
         die();
         break;
-        
+
     case 'list_sweets':
         $sweetType = filter_input(INPUT_GET, 'SweetTypeID', FILTER_VALIDATE_INT);
         if ($sweetType == 1) {
@@ -130,15 +130,15 @@ switch ($action) {
             $sweetType == 3;
             $sweetTypes = sweetDB::get_sweetTypes();
             $_SESSION['SweetTypeID'] = $sweetType;
-             
-          
+
+
             $sweets = sweetDB::get_sweetsType($sweetType);
             include('Profile.php');
         }
         break;
         die();
 
-  
+
     case 'viewAllUsers':
 
         $Users = user_db::select_all_users();
@@ -148,22 +148,24 @@ switch ($action) {
 
 
     case 'view_sweets':
-      
+
         $sweetsID = filter_input(INPUT_GET, 'sweetsID', FILTER_VALIDATE_INT);
         $sweet = sweetDB::getSweetView($sweetsID);
-        
-           include('Profile_view.php');
-        
+
+        include('Profile_view.php');
+
         break;
         die();
-        
+
     case 'events':
-        
-      $event = sweetDB::getAllEvents();
+
+        $event = sweetDB::getAllEvents();
         include 'events.php';
-        
+
         break;
         die();
+
+
     case 'delete_User':
         $user_id = filter_input(INPUT_POST, 'uName');
         echo $user_id;
@@ -171,35 +173,37 @@ switch ($action) {
         include 'ConfirmDelete.php';
         break;
         die();
-        
+
     case 'add_event':
-         
+
         $eventCode = filter_input(INPUT_POST, 'eventCode');
         $eventName = filter_input(INPUT_POST, 'eventName');
         $eventDiscription = filter_input(INPUT_POST, 'eventDiscription');
         $eventLocation = filter_input(INPUT_POST, 'eventLocation');
+        $eventTime = filter_input(INPUT_POST, 'eventTime');
         $eventCost = filter_input(INPUT_POST, 'eventCost');
-        if (empty($eventDiscription) || empty($eventName) ||
-                empty($dinner) || empty($eventLocation) || empty($eventCost)) {
+        if (empty($eventCode) || empty($eventName) ||
+                empty($eventDiscription) || empty($eventLocation) || empty($eventTime) || empty($eventCost)) {
             
         } else {
-            $f = new event($eventCode, $eventName, $eventDiscription, $eventLocation, $eventCost);
+            $f = new event($eventCode, $eventName, $eventDiscription, $eventLocation, $eventTime, $eventCost);
             user_db::addEvent($f);
         }
+
         include 'Admin_view.php';
-        die();
+
         break;
-        break;
+
         die();
-        
-        
+
+
     case 'logOut':
-         $_SESSION['uName'] = "";
-         include 'HomePage.php';
-        
+        $_SESSION['uName'] = "";
+        include 'HomePage.php';
+
         break;
         die();
-}  
+}
 ?>
 
 
