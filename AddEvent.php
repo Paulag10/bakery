@@ -8,27 +8,30 @@
             <title>Add Events</title>
             <link rel="stylesheet" type="text/css" href="Bakery.css"/>
         </head>
+       
         <body>
             <h1> Add Events <img src="images/Cupcake.jpg" alt="Avatar" class="avatars">
             </h1>
+           
             <ul>
 
                 <li><a href="Admin_view.php"> Home </a></li>
             </ul>
             <form action="." method="post" id="aligned">
                 <input type="hidden" name="action" value="add_event">
-
-                <table  align="center">
+                <table>
                     <tr>
                         <th>Event Code</th>
                     <br>
                     <th>Event Name</th>
                     <br>
-                    <br>
+                 
                     <th>Description</th>
+                    
                     <br>
+                    <th>Location</th>
                     <br>
-                    <th>Time & Location</th>
+                    <th> Time </th>
                     <br>
                     <th>Cost</th>
                     <td> &nbsp;</th>
@@ -41,6 +44,7 @@
                     <td><input type="text" name="eventName" required></td><br>
                     <td><input type="text" name="eventDiscription" required></td><br>
                     <td><input type="text" name="eventLocation" required></td><br><br>
+                    <td><input type="text" name="eventTime" required></td><br><br>
                     <td><input type="number" name="eventCost" required></td><br><br>
                     <td>  <input type="submit" value="Add event" name="event"> <br> </td>
 
