@@ -16,7 +16,21 @@ if (!isset($loginUName)) { $loginUName = '' ;}
     </head>
     
     <body>
-       
+       <ul>
+
+            <li><a href="index.php?action=default"> Home </a></li>
+            <img src="images/Rustic.jpg" style="width:10%">
+            <img src="images/Smores.jpg" style="width:10%">
+            <img src="images/Oreo-Truffles.jpg" style="width:10%">
+            <img src="images/Rustic.jpg" style="width:10%">
+            <img src="images/Smores.jpg" style="width:10%">
+            <img src="images/Oreo-Truffles.jpg" style="width:10%">
+           <img src="images/Rustic.jpg" style="width:10%">
+            <img src="images/Smores.jpg" style="width:10%">
+            <img src="images/Oreo-Truffles.jpg" style="width:10%">
+
+        </ul>
+
 
     
 

@@ -80,6 +80,20 @@ if (!isset($err['fNamefirstchar'])) {
         <title>Join Us</title>
     </head>
     <body>
+        <ul>
+
+            <li><a href="index.php?action=default"> Home </a></li>
+            <img src="images/Rustic.jpg" style="width:10%">
+            <img src="images/Smores.jpg" style="width:10%">
+            <img src="images/Oreo-Truffles.jpg" style="width:10%">
+            <img src="images/Rustic.jpg" style="width:10%">
+            <img src="images/Smores.jpg" style="width:10%">
+            <img src="images/Oreo-Truffles.jpg" style="width:10%">
+           <img src="images/Rustic.jpg" style="width:10%">
+            <img src="images/Smores.jpg" style="width:10%">
+            <img src="images/Oreo-Truffles.jpg" style="width:10%">
+
+        </ul>
 
         <form action="index.php" method="post">
             <input type="hidden" name="action" value="register" />
@@ -95,18 +109,18 @@ if (!isset($err['fNamefirstchar'])) {
 
                         <input type="text" name="fName" value="<?php echo htmlspecialchars($fName); ?>">
                         <label class="err"><?php
-echo htmlspecialchars($err['fName']);
-echo htmlspecialchars($err['fNamefirstchar']);
-?></label>
+                            echo htmlspecialchars($err['fName']);
+                            echo htmlspecialchars($err['fNamefirstchar']);
+                            ?></label>
 
                         <br>
                         <label>Last Name:</label>
 
                         <input type="text" name="lName" value="<?php echo htmlspecialchars($lName); ?>">
                         <label class="err"><?php
-echo htmlspecialchars($err['lName']);
-echo htmlspecialchars($err['lNamefirstchar'])
-?></label><br>
+                            echo htmlspecialchars($err['lName']);
+                            echo htmlspecialchars($err['lNamefirstchar'])
+                            ?></label><br>
 
                         <label>Email Address:</label>
                         <input type="text" name="email" value="<?php echo htmlspecialchars($email); ?>">
@@ -115,22 +129,22 @@ echo htmlspecialchars($err['lNamefirstchar'])
                         <label>User Name:</label>
                         <input type="text" name="uName" value="<?php echo htmlspecialchars($uName); ?>">
                         <label class="err"><?php
-echo htmlspecialchars($err['uName']);
-echo htmlspecialchars($err['NameTaken']);
-echo htmlspecialchars($err['uNamefirstchar']);
-?></label><br>
+                            echo htmlspecialchars($err['uName']);
+                            echo htmlspecialchars($err['NameTaken']);
+                            echo htmlspecialchars($err['uNamefirstchar']);
+                            ?></label><br>
 
                         <label>Password</label>
                         <input type="text" name="password" value="<?php echo htmlspecialchars($password); ?>">
                         <label class="err"><?php
-echo htmlspecialchars($err['shortPass']);
-echo htmlspecialchars($err['lcasePass']);
-echo htmlspecialchars($err['ucasePass']);
-echo htmlspecialchars($err['digPass']);
-?></label><br>
+                            echo htmlspecialchars($err['shortPass']);
+                            echo htmlspecialchars($err['lcasePass']);
+                            echo htmlspecialchars($err['ucasePass']);
+                            echo htmlspecialchars($err['digPass']);
+                            ?></label><br>
 
-                        <input type="submit" value="SIGNUP">
-                        <p>Have an Account? <a href="LogIn.php"> Login Now!</a></p>
+                        <input type="submit" value="SIGNUP"> 
+<!--                        ///<p>Have an Account? <a href="../index.php?action=logIn"> Login Now!</a></p>-->
                     </div>
                 </div>
             </div>

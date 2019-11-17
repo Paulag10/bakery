@@ -1,11 +1,11 @@
 <?php
 
-require 'user_db.php';
-require 'DatabaseConnection.php';
-require 'User.php';
-require 'SweetType.php';
-require 'sweetDB.php';
-require 'event.php';
+require 'model/user_db.php';
+require 'model/DatabaseConnection.php';
+require 'model/User.php';
+require 'model/SweetType.php';
+require 'model/sweetDB.php';
+require 'model/event.php';
 
 
 
@@ -27,8 +27,8 @@ if ($action == null) {
 //message = "";
 switch ($action) {
     case 'default':
-        include ('HomePage.php');
-        //include 'HomePage.php';
+        include ('view/HomePage.php');
+    
         die();
 
     case 'register':
@@ -88,9 +88,9 @@ switch ($action) {
             $User = new User($fName, $lName, $uName, $email, $hashpass);
             user_db::insert_users($User);
             echo $welcomeMessage .= "Welcome to the site " . $fName . "!";
-            include 'LogIn.php';
+            include 'view/logIn.php';
         } else {
-            include('registration.php');
+            include('view/registration.php');
         }
         die();
         break;
@@ -105,12 +105,12 @@ switch ($action) {
 
             $admin = 'admin';
             if (strcasecmp($user, $admin) == 0) {
-                include 'Admin_view.php';
+                include 'view/Admin_view.php';
             } else {
-                include 'ProfileHome.php';
+                include 'view/ProfileHome.php';
             }
         } else {
-            include 'logIn.php';
+            include 'view/logIn.php';
         }
         die();
         break;
@@ -120,12 +120,12 @@ switch ($action) {
         if ($sweetType == 1) {
             $sweetTypes = sweetDB::get_sweetTypes();
             $sweets = sweetDB::get_sweetsType($sweetType);
-            include('Profile.php');
+            include('view/Profile.php');
         } else if ($sweetType == 2) {
 
             $sweetTypes = sweetDB::get_sweetTypes();
             $sweets = sweetDB::get_sweetsType($sweetType);
-            include('Profile.php');
+            include('view/Profile.php');
         } else {
             $sweetType == 3;
             $sweetTypes = sweetDB::get_sweetTypes();
@@ -133,7 +133,7 @@ switch ($action) {
 
 
             $sweets = sweetDB::get_sweetsType($sweetType);
-            include('Profile.php');
+            include('view/Profile.php');
         }
         break;
         die();
@@ -142,7 +142,7 @@ switch ($action) {
     case 'viewAllUsers':
 
         $Users = user_db::select_all_users();
-        include 'disp_users.php';
+        include 'view/disp_users.php';
         die();
         break;
 
@@ -152,7 +152,7 @@ switch ($action) {
         $sweetsID = filter_input(INPUT_GET, 'sweetsID', FILTER_VALIDATE_INT);
         $sweet = sweetDB::getSweetView($sweetsID);
 
-        include('Profile_view.php');
+        include('view/Profile_view.php');
 
         break;
         die();
@@ -160,7 +160,7 @@ switch ($action) {
     case 'events':
 
         $event = sweetDB::getAllEvents();
-        include 'events.php';
+        include 'view/events.php';
 
         break;
         die();
@@ -170,7 +170,7 @@ switch ($action) {
         $user_id = filter_input(INPUT_POST, 'uName');
         echo $user_id;
         user_db::delete_users($user_id);
-        include 'ConfirmDelete.php';
+        include 'view/ConfirmDelete.php';
         break;
         die();
 
@@ -190,16 +190,27 @@ switch ($action) {
             user_db::addEvent($f);
         }
 
-        include 'Admin_view.php';
+        include 'view/Admin_view.php';
 
         break;
 
         die();
-
+    case 'viewAdminHome':
+        include 'view/Admin_view.php';
+        break;
+    die();
+    case 'viewHome':
+        include 'view/ProfileHome.php';
+        die();
+        break;
+    case 'AddEvent':
+        include 'view/AddEvent.php';
+        die();
+        break;
 
     case 'logOut':
         $_SESSION['uName'] = "";
-        include 'HomePage.php';
+        include 'view/HomePage.php';
 
         break;
         die();

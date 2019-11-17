@@ -15,7 +15,7 @@
            
             <ul>
 
-                <li><a href="Admin_view.php"> Home </a></li>
+              <li><a href="index.php?action=viewAdminHome"> Home </a></li>
             </ul>
             <form action="." method="post" id="aligned">
                 <input type="hidden" name="action" value="add_event">

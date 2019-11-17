@@ -29,7 +29,7 @@
                         <ul>
                              
                            <li><a href="index.php?action=logOut">Log Out</a></li>
-                            <li><a href="ProfileHome.php">Home</a></li>
+                            <li><a href="index.php?action=viewHome">Home</a></li>
                              <?php foreach ($sweetTypes as $sweetType) : ?>
                                 <li>
                                     <a href="?action=list_sweets&amp;SweetTypeID=<?php echo $sweetType->getSweetTypeID(); ?>">

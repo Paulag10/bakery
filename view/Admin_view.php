@@ -13,7 +13,7 @@
 
             <li><a href="index.php?action=logOut">Log Out</a></li>
             <li>  <a href="index.php?action=viewAllUsers">View all users</a></li>
-            <li><a href="AddEvent.php">Add Event </a></li>
+            <li><a href="index.php?action=AddEvent">Add Event </a></li>
         </ul>
 
 

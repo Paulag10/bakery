@@ -13,7 +13,7 @@
                         <ul>
                              
                             
-                             <li><a href="Admin_view.php"> Home </a></li>
+                             <li><a href="index.php?action=viewAdminHome"> Home </a></li>
                   </ul>
     <div class="center">
       <table>

@@ -24,7 +24,7 @@ w3schoolbootstrap
                              
                             <li><a href="index.php?action=logIn">Log In </a></li>
                             <li><a href="index.php?action=register"> Join Us </a></p></li>
-                             <li><a href="ContactU.php">Contact Us</a></li>
+                             <li><a href="view/ContactU.php">Contact Us</a></li>
                   </ul>
   
 <div class="container">
