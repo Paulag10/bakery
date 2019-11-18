@@ -17,10 +17,20 @@ w3schoolbootstrap
     <body>
          <form action="index.php" method="post">
             <input type="hidden" name="action" value="add" />
-
+ 
         <div class="center">
 <div>
     <div class="jumbotron jumbotron-fluid">
+        <aside>
+
+            <ul>
+                <ul>
+                    <a href="index.php?action=viewHome"> Home </a>
+
+                </ul>
+            </ul>
+        </aside>
+       
     <h1><?php echo htmlspecialchars($sweet['sweetsName']);  ?></h1>      
     </div>
 
@@ -33,14 +43,7 @@ w3schoolbootstrap
       <p><b>Your Price:</b>
         <?php echo '$' .  htmlspecialchars($sweet['listPrice']); ?></p>
    
-        <b>Quantity:</b>&nbsp;
-         <select name="quantity">
-         <?php for($i = 1; $i <= 10; $i++) : ?>
-                <option value="<?php echo $i; ?>">
-                    <?php echo $i; ?>
-                </option>
-                <?php endfor; ?>
-                </div>
+       
 
     <input type="submit" value="Your goddie" />
         </div>

@@ -148,6 +148,12 @@ switch ($action) {
         die();
         break;
 
+    case 'viewAllEvents':
+       $event = sweetDB::getAllEvents();
+        include 'view/events_delete.php';
+        break;
+        die();
+        
 
     case 'view_sweets':
 
@@ -168,7 +174,78 @@ switch ($action) {
         break;
         die();
 
-    
+      case 'update':
+        $options = [
+            
+            'cost' => 12
+                
+        ];
+        $err = [];
+
+        $fName = filter_input(INPUT_POST, 'fName');
+        $lName = filter_input(INPUT_POST, 'lName');
+        $uName = filter_input(INPUT_POST, 'uName');
+        $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+        $password = filter_input(INPUT_POST, 'password');
+        $updatePass = filter_input(INPUT_POST, 'updatePass');
+        $currUser = user_db::get_user($_SESSION['uName']);
+
+        if ($updatePass == "yes") {
+            if (preg_match('/^.{10}/', $password) != 1) {
+                $err['shortPass'] = "Password must be at least 10 characters.";
+            }
+            if (preg_match('/[a-z]/', $password) != 1) {
+                $err['lcasePass'] = "Your password must contain a lowercase letter.";
+            }
+
+            if (preg_match('/[A-Z]/', $password) != 1) {
+                $err['ucasePass'] = "Your password must contain an Uppercase letter.";
+            }
+
+            if (preg_match('/[0-9]/', $password) != 1) {
+                $err['digPass'] = "Your password must contain a digit.";
+            }
+        }
+        if ($fName == null || $fName == "") {
+            $err['fName'] = "Enter a First Name";
+        }
+        if (preg_match('/^[a-zA-Z]/', $fName) != 1) {
+            $err['fNamefirstchar'] = "First Name must begin with a letter";
+        }
+        if ($lName == null || $lName == "") {
+            $err['lName'] = "Enter a last name";
+        }
+        if (preg_match('/^[a-zA-Z]/', $lName) != 1) {
+            $err['lNamefirstchar'] = "Last Name must begin with a letter";
+        }
+
+        if ($email == null || $email == "") {
+            $err['noEmail'] = "Enter an Email";
+        } else if ($email == false) {
+            $err['invalidEmail'] = "Email is invalid";
+        }
+
+
+
+        if (empty($err)) {
+            if ($updatePass == "yes") {
+                $hashpass = password_hash($password, PASSWORD_BCRYPT, $options);
+                $User = new User($fName, $lName, $_SESSION['uName'], $email, $hashpass);
+            } else {
+                $User = new User($fName, $lName, $currUser->getUName(), $email, $currUser->getPassword());
+            }
+            user_db::update_User($User);
+            $welcomeMessage = "Welcome to the site " . $fName . "!";
+            include 'view/ProfileHome.php';
+        } else {
+
+            include('view/updateUsers.php');
+        }
+
+        die();
+        break;
+
+
 
     case 'delete_User':
         $user_id = filter_input(INPUT_POST, 'uName');
@@ -177,7 +254,24 @@ switch ($action) {
         include 'view/ConfirmDelete.php';
         break;
         die();
+    case 'delete_event':
+        $eventID = filter_input(INPUT_POST, 'eventID');
+      echo $eventID;
+        user_db::delete_events($eventID);
+        include 'view/Admin_view.php';
+        break;
+        die();
+        
 
+        case 'select':
+        $date_forMeal = date("Y-m-d");
+        $food_id = filter_input(INPUT_POST, 'food_id');
+         $_SESSION['foodID'] = $food_id;
+        $users = $_SESSION['uName'];
+        user_db::logMeal($users, $food_id, $date_forMeal);
+        include 'Confirmation_log.php';
+        die();
+        break;
     case 'add_event':
 
         $eventCode = filter_input(INPUT_POST, 'eventCode');

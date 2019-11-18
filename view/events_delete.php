@@ -37,10 +37,10 @@
               
               <td>  <form action="index.php" method="POST">
                     <input type="hidden" name="action"
-                           value="select">
-                    <input type="hidden" name="uName"
-                           value="<?php echo $user['uName']; ?>">
-                     <input type="submit" value="Select">
+                           value="delete_event">
+                    <input type="hidden" name="eventID"
+                           value="<?php echo $e['eventID']; ?>">
+                     <input type="submit" value="Delete">
                   </form></td>
             </tr>
             <?php endforeach; ?>

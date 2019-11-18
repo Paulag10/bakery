@@ -146,6 +146,41 @@ public static function addEvent($f) {
         $statement->closeCursor();
     }
 
+    
+    public static function update_User($user) {
+         $db = DatabaseConnection::getDB();
+        /* @var $user User */
+        $query = 'Update users
+            set uName = :uName,
+            fName = :fName,
+            lName = :lName,
+            email = :email,
+            password = :password
+            where uName = :uName';
+
+        $statement = $db->prepare($query);
+        $statement->bindValue(':uName', $user->getUName());
+        $statement->bindValue(':fName', $user->getFName());
+        $statement->bindValue(':lName', $user->getLName());
+        $statement->bindValue(':email', $user->getEmail());
+        $statement->bindValue(':password', $user->getPassword());
+
+        $statement->execute();
+        $statement->closeCursor();
+    }
+
+    public static function delete_events($eventID) {
+        $db = DatabaseConnection::getDB();
+    $query = 'DELETE FROM events
+              WHERE eventID = :eventID';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':eventID', $eventID);
+    $statement->execute();
+    $statement->closeCursor();
+
+        
+    }
+
 }
 
 

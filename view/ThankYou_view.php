@@ -17,11 +17,20 @@ and open the template in the editor.
   
   
 </head>
+   <aside>
 
+            <ul>
+                <ul>
+                    <a href="index.php?action=viewHome"> Home </a>
+
+                </ul>
+            </ul>
+        </aside>
 <body>
 
   <div class="jumbotron text-xs-center">
   <h1 class="display-3">Thank You!</h1>
+   
      <td><?php echo $selectedUser->getFName() ." ". $selectedUser->getLName(); ?></td>
   <p class="lead"><strong>Hope you enjoy your Sweets </p>
   

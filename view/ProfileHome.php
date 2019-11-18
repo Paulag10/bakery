@@ -25,6 +25,7 @@ w3schoolbootstrap
 
                 <ul>
                     <li><a href="index.php?action=logOut">Log Out</a></li>
+                     <li><a href="index.php?action=update">Edit User </a></li>
                     <li><a href="index.php?action=list_sweets"> View Sweets  </a></li>
                     <li><a href="index.php?action=events"> View Events  </a></li>
            
