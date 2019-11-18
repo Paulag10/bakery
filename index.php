@@ -9,6 +9,8 @@ require 'model/event.php';
 
 
 
+
+
 session_start();
 if (!isset($_SESSION['uName'])) {
     $_SESSION['uName'] = "";
@@ -151,6 +153,7 @@ switch ($action) {
 
         $sweetsID = filter_input(INPUT_GET, 'sweetsID', FILTER_VALIDATE_INT);
         $sweet = sweetDB::getSweetView($sweetsID);
+        $_SESSION ['sweetID'] = $sweetsID;
 
         include('view/Profile_view.php');
 
@@ -165,6 +168,7 @@ switch ($action) {
         break;
         die();
 
+    
 
     case 'delete_User':
         $user_id = filter_input(INPUT_POST, 'uName');
@@ -191,9 +195,15 @@ switch ($action) {
         }
 
         include 'view/Admin_view.php';
-
         break;
-
+        die();
+        
+    case 'add':
+      
+      $selectedSweets = sweetDB::getSweetView ($_SESSION ['sweetID']);
+      $selectedUser = User_db::get_user($_SESSION['uName']);
+     include 'view/Thankyou_view.php';
+        break;
         die();
     case 'viewAdminHome':
         include 'view/Admin_view.php';

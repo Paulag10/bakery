@@ -15,6 +15,9 @@ w3schoolbootstrap
         <title></title>
     </head>
     <body>
+         <form action="index.php" method="post">
+            <input type="hidden" name="action" value="add" />
+
         <div class="center">
 <div>
     <div class="jumbotron jumbotron-fluid">
@@ -38,7 +41,8 @@ w3schoolbootstrap
                 </option>
                 <?php endfor; ?>
                 </div>
-        <input type="submit" value="Your goddie" />
+
+    <input type="submit" value="Your goddie" />
         </div>
 </div>
     </form>

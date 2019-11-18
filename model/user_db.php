@@ -71,7 +71,7 @@ class user_db {
         if (empty($results)) {
             return false;
         } else {
-            $User = new User($results[0]['fName'], $results[0]['lName'], $results[0]['uName'], $results[0]['email'], $results[0]['password'], $results[0]['profilePic']);
+            $User = new User($results[0]['fName'], $results[0]['lName'], $results[0]['uName'], $results[0]['email'], $results[0]['password']);
         }
         return $User;
     }
