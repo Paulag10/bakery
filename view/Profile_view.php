@@ -41,8 +41,10 @@ w3schoolbootstrap
 
 <div>
       <p><b>Your Price:</b>
+          
         <?php echo '$' .  htmlspecialchars($sweet['listPrice']); ?></p>
    
+     
        
 
     <input type="submit" value="Your goddie" />

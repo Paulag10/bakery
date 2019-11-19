@@ -299,6 +299,7 @@ switch ($action) {
       
       $selectedSweets = sweetDB::getSweetView ($_SESSION ['sweetID']);
       $selectedUser = User_db::get_user($_SESSION['uName']);
+      
      include 'view/Thankyou_view.php';
         break;
         die();

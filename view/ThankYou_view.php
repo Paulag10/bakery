@@ -33,6 +33,9 @@ and open the template in the editor.
    
      <td><?php echo $selectedUser->getFName() ." ". $selectedUser->getLName(); ?></td>
   <p class="lead"><strong>Hope you enjoy your Sweets </p>
+  <p class="lead">
+     <?php echo htmlspecialchars($selectedSweets['sweetsName']);  ?>
+  </p>
   
   <hr>
   <p>
@@ -41,9 +44,8 @@ and open the template in the editor.
   <p>
      <?php echo htmlspecialchars($selectedSweets['description']);  ?>
   </p>
-  <p class="lead">
-     <?php echo htmlspecialchars($selectedSweets['sweetsName']);  ?>
-  </p>
+  
+  
 </div>
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js'></script>

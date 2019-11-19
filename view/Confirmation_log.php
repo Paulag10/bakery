@@ -9,7 +9,7 @@ and open the template in the editor.
 
 <head>
   <meta charset="UTF-8">
-  <title>Bootstrap 4 Thank You Page Template</title>
+  <title>Bakery</title>
   <script src="https://bootstrapcreative.com/wp-bc/wp-content/themes/wp-bootstrap/codepen/bootstrapcreative.js?v=1"></script>
   
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css'>
@@ -32,7 +32,7 @@ and open the template in the editor.
   <h1 class="display-3">Thank You!</h1>
    
      <td><?php echo $selectedUser->getFName() ." ". $selectedUser->getLName(); ?></td>
-  <p class="lead"><strong> Thank you for Signing up for this Event!!</p>
+  <p class="lead"><strong> For Signing up for this Event!!</p>
   
    <p> <img src="images/<?php echo htmlspecialchars($selectedEvent['eventCode']); ?>.jpg"</p>
   <hr>

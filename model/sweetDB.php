@@ -95,6 +95,7 @@ public static function get_sweetsType($sweetTypeID){
         $statement->closeCursor();
         return $result;
     }
+    
       
 
     }
