@@ -44,7 +44,7 @@ $currUser = user_db::get_user($_SESSION['uName']);
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Tweeter</title>
+        <title>Bakery</title>
         <link rel="stylesheet" type="text/css" href="Bakery.css" />
     </head>
     <body>
@@ -57,14 +57,19 @@ $currUser = user_db::get_user($_SESSION['uName']);
                 </ul>
             </ul>
         </aside
-        <h1>Profile Page</h1>
+        <h1></h1>
 
 
 
 
         <form action="index.php" method="POST">
             <input type="hidden" name="action" value="update">
-            <div class="center"
+            <div class="main-layouts wrapper">
+                <h1> Edit Your Account    <img src="images/Oreo-Truffles.jpg" style="width:10%">
+                </h1>
+                <div class="main-agileinfo">
+                    <div class="agileits-top">
+          
             <label>User Name:</label>
             <input type="text" name="uName" value="<?php echo htmlspecialchars($currUser->getuName()); ?>" disabled="">
             <br>
@@ -72,17 +77,17 @@ $currUser = user_db::get_user($_SESSION['uName']);
             <label>First Name:</label>
 
             <input type="text" name="fName" value="<?php echo htmlspecialchars($currUser->getFName()); ?>">
-            <label class="err"><?php echo htmlspecialchars($err['fName']); ?></label>
+            <label class="err"><?php echo htmlspecialchars($err['fName']); ?></label><br>
 
             <br>
             <label>Last Name:</label>
 
             <input type="text" name="lName" value="<?php echo htmlspecialchars($currUser->getLName()); ?>">
-            <label class="err"><?php echo htmlspecialchars($err['lName']); ?></label><br>
+            <label class="err"><?php echo htmlspecialchars($err['lName']); ?></label><br><br>
 
             <label>Email Address:</label>
             <input type="text" name="email" value="<?php echo htmlspecialchars($currUser->getEmail()); ?>">
-            <label class="err"><?php echo htmlspecialchars($err['noEmail']); ?></label><br>
+            <label class="err"><?php echo htmlspecialchars($err['noEmail']); ?></label><br><br>
             <label>Password<label>
             <input type="text" name="password">
              <label class="err"><?php echo htmlspecialchars($err['shortPass']); 
@@ -97,6 +102,8 @@ $currUser = user_db::get_user($_SESSION['uName']);
             
             <input type="submit" value="Update"><br>
             </div>
+            </div>  
+             
         </form>
          
     </body>
