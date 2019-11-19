@@ -81,5 +81,21 @@ public static function get_sweetsType($sweetTypeID){
        
         return $results;
      }
+     
+     public static function getEvent($event_id) {
+         $db = DatabaseConnection::getDB();
+    $query = 'SELECT *
+              FROM events
+            Where eventID = :eventID';
+    
+         $statement = $db->prepare($query);
+        $statement->bindValue(':eventID', $event_id);
+        $statement->execute();
+        $result = $statement->fetch();
+        $statement->closeCursor();
+        return $result;
     }
+      
 
+    }
+       

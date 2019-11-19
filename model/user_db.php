@@ -181,7 +181,24 @@ public static function addEvent($f) {
         
     }
 
-}
+    public static function logEvent($users, $event_id, $date_forEvent) {
+       
+         $db = DatabaseConnection::getDB();
+        $query = 'INSERT INTO loggedevents
+            (fk_user, fk_events , date)
+             VALUES
+             (:users, :event_id, :date_forEvent)';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':users', $users);
+        $statement->bindValue(':event_id', $event_id);
+        $statement->bindValue(':date_forEvent', $date_forEvent);
+        $statement->execute();
+        $statement->closeCursor();
+    }
+        
+    }
+
+
 
 
 

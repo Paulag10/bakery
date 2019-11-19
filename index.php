@@ -262,16 +262,19 @@ switch ($action) {
         break;
         die();
         
-
-        case 'select':
-        $date_forMeal = date("Y-m-d");
-        $food_id = filter_input(INPUT_POST, 'food_id');
-         $_SESSION['foodID'] = $food_id;
-        $users = $_SESSION['uName'];
-        user_db::logMeal($users, $food_id, $date_forMeal);
-        include 'Confirmation_log.php';
+  case 'select':
+     
+        $date_forEvent = date("Y-m-d");
+        $event_id = filter_input(INPUT_POST, 'event_id');
+         $selectedEvent = sweetDB::getEvent($event_id);
+       $users = $_SESSION['uName'];
+      $selectedUser = User_db::get_user($_SESSION['uName']);
+        user_db::logEvent($users, $event_id, $date_forEvent);
+        
+        include 'view/Confirmation_log.php';
         die();
         break;
+      
     case 'add_event':
 
         $eventCode = filter_input(INPUT_POST, 'eventCode');

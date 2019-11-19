@@ -38,8 +38,8 @@
               <td>  <form action="index.php" method="POST">
                     <input type="hidden" name="action"
                            value="select">
-                    <input type="hidden" name="uName"
-                           value="<?php echo $user['uName']; ?>">
+                    <input type="hidden" name="event_id"
+                           value="<?php echo $e['eventID']; ?>">
                      <input type="submit" value="Select">
                   </form></td>
             </tr>
