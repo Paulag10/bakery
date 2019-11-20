@@ -20,7 +20,7 @@
       <tr>
           <th>User</th>
         <th>What did you enjoy the most about your treat?</th>
-        <th>Will You be Inviting a Friend To Paula's Sweets?</th>
+        <th>Will you be inviting a friend To Paula's Sweets?</th>
         <th>Any Comments or Suggestions?</th>
       
       </tr>
