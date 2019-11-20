@@ -6,6 +6,7 @@ require 'model/User.php';
 require 'model/SweetType.php';
 require 'model/sweetDB.php';
 require 'model/event.php';
+require 'model/survey.php';
 
 
 
@@ -153,6 +154,12 @@ switch ($action) {
         include 'view/events_delete.php';
         break;
         die();
+        
+    case 'viewAllSurveys':
+        $survey = user_db::getAllSurveys();
+        include 'view/viewAllSurveys.php';
+        break;
+    die();
         
 
     case 'view_sweets':
@@ -316,6 +323,33 @@ switch ($action) {
         die();
         break;
 
+    
+    case 'Survey':
+        include 'view/Survey.php';
+      
+        break;
+         die();
+         
+    case 'Log_survey':
+          $date_forSurvey = date("Y-m-d");
+        $userSelected = $_SESSION['uName'];
+        $quality = filter_input(INPUT_POST, 'quality');
+        $recommend = filter_input(INPUT_POST, 'recommend');
+        $comments = filter_input(INPUT_POST, 'comments');
+        
+        if (empty($quality) || empty($recommend) ||
+                empty($comments)){
+            
+        } else {
+            $f = new survey($quality, $recommend, $comments);
+            user_db::addSurvey($f, $userSelected, $date_forSurvey);
+        }
+        var_dump($f);
+
+        
+        include 'view/ProfileHome.php';
+        break;
+        die();
     case 'logOut':
         $_SESSION['uName'] = "";
         include 'view/HomePage.php';

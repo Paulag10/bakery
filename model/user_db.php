@@ -195,8 +195,43 @@ public static function addEvent($f) {
         $statement->execute();
         $statement->closeCursor();
     }
+    
+    public static function addSurvey($f,$userSelected,$date_forSurvey) {
+     $db = DatabaseConnection::getDB();
+
+        $query = 'INSERT INTO survey
+                     ( fk_user, quality , recommend , comments, date)
+                  VALUES
+                     (:fk_user, :quality, :recommend, :comments, :date)';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':fk_user', $userSelected);
+        $statement->bindValue(':quality', $f->getQuality());
+        $statement->bindValue(':recommend', $f->getRecommend());
+        $statement->bindValue(':comments', $f->getComments());
+        $statement->bindValue(':date', $date_forSurvey);
+        
+        
+   
+
+        $statement->execute();
+        $statement->closeCursor();
+    }
+
+    public static function getAllSurveys() {
+        
+        $db = DatabaseConnection::getDB();
+       $query = 'SELECT * FROM survey';
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $results = $statement->fetchAll();
+        $statement->closeCursor();
+       
+        return $results;
+     }
         
     }
+
+
 
 
 

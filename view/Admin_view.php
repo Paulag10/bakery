@@ -15,6 +15,7 @@
             <li><a href="index.php?action=viewAllUsers">View all users</a></li>
             <li><a href="index.php?action=AddEvent">Add Event </a></li>
           <li><a href="index.php?action=viewAllEvents">View all Events</a></li>
+            <li><a href="index.php?action=viewAllSurveys">View all Surveys</a></li>
            
         </ul>
 

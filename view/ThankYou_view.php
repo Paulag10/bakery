@@ -44,6 +44,11 @@ and open the template in the editor.
   <p>
      <?php echo htmlspecialchars($selectedSweets['description']);  ?>
   </p>
+     <td>  <form action="index.php" method="POST">
+                    <input type="hidden" name="action"
+                           value="Survey">
+                    <input type="submit" value="Take a Survey">
+                  </form></td>
   
   
 </div>
