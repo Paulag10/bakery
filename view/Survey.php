@@ -45,7 +45,7 @@
       <div>
        
         <input type="radio" name="recommend" value="Yes">YES<br>
-        <input type="radio" name="recommend" value="NO">NO<br>
+        <input type="radio" name="recommend" value="No">NO<br>
        
       
       </div>
