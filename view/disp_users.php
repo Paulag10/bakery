@@ -22,6 +22,7 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>&nbsp;</th>
+               
                 
             </tr>
             <?php foreach ($Users as $user) : ?>
@@ -36,6 +37,7 @@
                            value="<?php echo $user['uName']; ?>">
                      <input type="submit" value="Delete">
                </form></td>
+              
              
             </tr>
             <?php endforeach; ?>

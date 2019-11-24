@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Survey</title>
+  <title>Comment</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <link href="Bakery.css" rel="stylesheet"/>
@@ -13,12 +13,12 @@
 </head>
 <body>
 <div class="jumbotron text-center">
- <h1> Paula Sweets Survey <img src="images/Cupcake.jpg" alt="Avatar" class="avatars">
+ <h1> Admin Comments <img src="images/Cupcake.jpg" alt="Avatar" class="avatars">
                 </h1>
 </div>
      <ul>
                              
-                           <a href="index.php?action=viewHome"> Home </a>
+   <li><a href="index.php?action=viewAdminHome"> Home </a></li>
 
                   </ul>
     <div class="container">
@@ -29,37 +29,18 @@
     <div class="col-sm-4">
       
        <form action="." method="post" id="aligned">
-                <input type="hidden" name="action" value="Log_survey">
-  <div>  
-        <p> What did you enjoy the most about your treat? </p>
-    </div>
-        
-    <div>
-             <textarea rows="6" cols="30" name="quality" placeholder="What did you enjoy the most about your treat?" required></textarea>
+                <input type="hidden" name="action" value="addComment">
   
-          
-    </div>
          <div>
-                   <p>Will You be Inviting a Friend To Paula's Sweets?</p>
-      </div>
-  
-      <div>
-       
-        <input type="radio" name="recommend" value="Yes" required>YES<br>
-        <input type="radio" name="recommend" value="No" required>NO<br>
-       
-      
-      </div>
-         <div>
-    <p>Any Comments or Suggestions?</p>
+    <p>Admin Comments</p>
   </div>
   
   <div>
-      <textarea rows="6" cols="30" name="comments" placeholder=" Leave a Suggestions" required></textarea>
-   
+      <textarea rows="10" cols="40" name="comment" placeholder="Leave a Comment !" required></textarea>
+
       <form action="index.php" method="POST">
                     <input type="hidden" name="action"
-                           value="Log_survey">
+                           value="addComment">
                     <input type="submit" value="Select">
                   </form>
      
@@ -76,5 +57,3 @@
 
 </body>
 </html>
-
-

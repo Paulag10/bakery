@@ -228,8 +228,62 @@ public static function addEvent($f) {
        
         return $results;
      }
+     
+     public static function get_comments_by_username($uName) {
+      $db = DatabaseConnection::getDB();
+        $query = 'SELECT * FROM comments where commentTo = :uName';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':uName', $uName);
+        $statement->execute();
+        $comments = $statement->fetchAll();
+        $comments0 = [];
+        foreach ($comments as $value) {
+            $comments0[$value['CommentID']] = new Comment($value['CommentID'], $value['commentFrom'], $value['commentTo'], $value['commentText'], $value['commentDate']);
+        }
+        $statement->closeCursor();
+        
+        return $comments0;
+    }
+
+    public static function add_comment($commentTo, $commentFrom, $commentText, $commentDate) 
+            {
+         $db = DatabaseConnection::getDB();
+          $query = 'INSERT INTO comments
+                 (commentFrom, commentTo, commentText, commentDate)
+              VALUES
+                 (:commentFrom, :commentTo, :commentText, :commentDate)';
+
+        $statement = $db->prepare($query);
+        $statement->bindValue(':commentTo', $commentTo);
+        $statement->bindValue(':commentFrom', $commentFrom);
+        $statement->bindValue(':commentText', $commentText);
+        $statement->bindValue(':commentDate', $commentDate);
+
+        $statement->execute();
+        $statement->closeCursor();
+    }
+
+    public static function select_servey($fk_user) {
+        
+           $db = DatabaseConnection::getDB();
+    $query = 'SELECT *
+              FROM survey
+            Where fk_user = :fk_user';
+    
+         $statement = $db->prepare($query);
+        $statement->bindValue(':fk_user', $fk_user);
+        $statement->execute();
+        $result = $statement->fetch();
+        $statement->closeCursor();
+        return $result;
+    }
+        
         
     }
+
+
+
+
 
 
 

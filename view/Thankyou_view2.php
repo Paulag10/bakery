@@ -22,7 +22,7 @@ and open the template in the editor.
 
             <ul>
                 <ul>
-                    <a href="index.php?action=viewHome"> Home </a>
+                 <li><a href="index.php?action=viewAdminHome"> Home </a></li>
 
                 </ul>
             </ul>
@@ -32,36 +32,20 @@ and open the template in the editor.
   <div class="jumbotron text-xs-center">
   <h1 class="display-3">Thank You!</h1>
    
-     <td><?php echo $selectedUser->getFName() ." ". $selectedUser->getLName(); ?></td>
-  <p class="lead"><strong>Hope you enjoy your Sweets </p>
+     <td></td>
   <p class="lead">
-     <?php echo htmlspecialchars($selectedSweets['sweetsName']);  ?>
+  <p class="lead">
+   An Email Has been sent to the User!!
   </p>
   
   <hr>
   <p>
-    <p> <img src="images/<?php echo htmlspecialchars($selectedSweets['sweetsCode']); ?>.jpg"</p>
+    <p> <img src="images/youGotMail.png"style="width:40%" > 
   </p>
-  <p>
-     <?php echo htmlspecialchars($selectedSweets['description']);  ?>
-  </p>
-     <td>  <form action="index.php" method="POST">
-                    <input type="hidden" name="action"
-                           value="Survey">
-                    <input type="submit" value="Take a Survey">
-                  </form></td>
+
+    
   
   
 </div>
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js'></script>
-
-  
-
-
-     
-      
-      
-    
-    </body>
-</html>

@@ -7,6 +7,7 @@ require 'model/SweetType.php';
 require 'model/sweetDB.php';
 require 'model/event.php';
 require 'model/survey.php';
+require 'model/Comment.php';
 
 
 
@@ -16,18 +17,19 @@ session_start();
 if (!isset($_SESSION['uName'])) {
     $_SESSION['uName'] = "";
 }
+ 
 
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == null) {
     $action = filter_input(INPUT_GET, 'action');
     if ($action == null) {
-        //$action = 'profile';   
+          
         $action = 'list_products';
         $action = 'default';
     }
 }
-//message = "";
+
 switch ($action) {
     case 'default':
         include ('view/HomePage.php');
@@ -156,7 +158,9 @@ switch ($action) {
         die();
         
     case 'viewAllSurveys':
+
         $survey = user_db::getAllSurveys();
+
         include 'view/viewAllSurveys.php';
         break;
     die();
@@ -331,7 +335,7 @@ switch ($action) {
          die();
          
     case 'Log_survey':
-          $date_forSurvey = date("Y-m-d");
+        $date_forSurvey = date("Y-m-d");
         $userSelected = $_SESSION['uName'];
         $quality = filter_input(INPUT_POST, 'quality');
         $recommend = filter_input(INPUT_POST, 'recommend');
@@ -344,12 +348,39 @@ switch ($action) {
             $f = new survey($quality, $recommend, $comments);
             user_db::addSurvey($f, $userSelected, $date_forSurvey);
         }
-        var_dump($f);
+
 
         
         include 'view/ProfileHome.php';
         break;
         die();
+        
+        case'leave_comment':
+            $fk_user = filter_input(INPUT_POST, 'fk_user');
+        $_SESSION['fk_user'] = $fk_user;
+         user_db::select_servey($fk_user);
+        
+     include 'view/viewComments.php';
+        die();
+        break;
+
+        
+          
+        case 'addComment':
+
+        $commentDate = date("Y-m-d H:i:s");
+       $commentTo = $_SESSION['fk_user'];
+       $commentFrom = $_SESSION['uName'];
+       $comments = filter_input(INPUT_POST, 'comments');
+        $selectedComment =  user_db::add_comment($commentTo, $commentFrom, $comments, $commentDate);
+      
+        $user = user_db::get_user($comments);
+          include 'view/Thankyou_view2.php';
+
+        die();
+        break;
+    
+
     case 'logOut':
         $_SESSION['uName'] = "";
         include 'view/HomePage.php';

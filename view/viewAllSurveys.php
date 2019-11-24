@@ -29,16 +29,19 @@
        <?php foreach ($survey as $s) : ?>
             <tr>
                 
-               
+      
               <td><?php echo $s['fk_user']; ?></td>
               <td><?php echo $s['quality']?></td>
               <td><?php echo $s['recommend']; ?></td>
               <td><?php echo $s['comments']; ?></td>
               
-              <td>  
-                   
+              <td>   <td><form action="index.php" method="POST">
+                    <input type="hidden" name="action"
+                           value="leave_comment">
+                    <input type="hidden" name="fk_user"
+                           value="<?php echo $s['fk_user']; ?>">
                      <input type="submit" value="Message">
-                  </td>
+               </form>
             </tr>
             <?php endforeach; ?>
     </tbody>
