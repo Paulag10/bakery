@@ -183,3 +183,17 @@ padding: 5px;
 .sub :hover{
     background: #8DC26F;
 }
+.adminButtons{
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+}
+.adminConsole{
+    margin: 0 auto;
+    width: 50%;
+}
+.adminButtonContainer{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}

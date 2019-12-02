@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Events</title>
+  <title>Surveys</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -12,8 +12,8 @@
 <body>
 
 <div class="container">
-  <h2>Upcoming Events</h2>
-  <p>Please join us for an Event.</p> 
+  <h2>All users surveys</h2>
+ 
   <li><a href="index.php?action=viewAdminHome"> Home </a></li>
   <table class="table table-striped">
     <thead>
