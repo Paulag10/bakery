@@ -143,7 +143,7 @@ if (!isset($err['fNamefirstchar'])) {
                             echo htmlspecialchars($err['digPass']);
                             ?></label><br>
 
-                            <input type="submit" value="SIGNUP"> 
+                            <input type="submit" value="SIGNUP" style="width: 80%;"> 
 
                     </div>
                 </div>
