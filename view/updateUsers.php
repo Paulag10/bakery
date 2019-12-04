@@ -23,10 +23,18 @@ if (!isset($err['uName'])) {
 if (!isset($err['noEmail'])) {
     $err['noEmail'] = "";
 }
-if (!isset($err['shortPass'])) { $err['shortPass']="";}
-if (!isset($err['lcasePass'])) { $err['lcasePass']="";}
-if (!isset($err['ucasePass'])) { $err['ucasePass']="";}
-if (!isset($err['digPass'])) { $err['digPass']="";}
+if (!isset($err['shortPass'])) {
+    $err['shortPass'] = "";
+}
+if (!isset($err['lcasePass'])) {
+    $err['lcasePass'] = "";
+}
+if (!isset($err['ucasePass'])) {
+    $err['ucasePass'] = "";
+}
+if (!isset($err['digPass'])) {
+    $err['digPass'] = "";
+}
 if (!isset($err['invalidEmail'])) {
     $err['invalidEmail'] = "";
 }
@@ -48,7 +56,7 @@ $currUser = user_db::get_user($_SESSION['uName']);
         <link rel="stylesheet" type="text/css" href="Bakery.css" />
     </head>
     <body>
-      <aside>
+        <aside>
 
             <ul>
                 <ul>
@@ -69,42 +77,44 @@ $currUser = user_db::get_user($_SESSION['uName']);
                 </h1>
                 <div class="main-agileinfo">
                     <div class="agileits-top">
-          
-            <label>User Name:</label>
-            <input type="text" name="uName" value="<?php echo htmlspecialchars($currUser->getuName()); ?>" disabled="">
-            <br>
 
-            <label>First Name:</label>
+                        <label>User Name:</label>
+                        <input type="text" name="uName" value="<?php echo htmlspecialchars($currUser->getuName()); ?>" disabled="">
+                        <br>
 
-            <input type="text" name="fName" value="<?php echo htmlspecialchars($currUser->getFName()); ?>">
-            <label class="err"><?php echo htmlspecialchars($err['fName']); ?></label><br>
+                        <label>First Name:</label>
 
-            <br>
-            <label>Last Name:</label>
+                        <input type="text" name="fName" value="<?php echo htmlspecialchars($currUser->getFName()); ?>">
+                        <label class="err"><?php echo htmlspecialchars($err['fName']); ?></label><br>
 
-            <input type="text" name="lName" value="<?php echo htmlspecialchars($currUser->getLName()); ?>">
-            <label class="err"><?php echo htmlspecialchars($err['lName']); ?></label><br><br>
+                        <br>
+                        <label>Last Name:</label>
 
-            <label>Email Address:</label>
-            <input type="text" name="email" value="<?php echo htmlspecialchars($currUser->getEmail()); ?>">
-            <label class="err"><?php echo htmlspecialchars($err['noEmail']); ?></label><br><br>
-            <label>Password<label>
-            <input type="text" name="password">
-             <label class="err"><?php echo htmlspecialchars($err['shortPass']); 
-                                      echo htmlspecialchars($err['lcasePass']);
-                                      echo htmlspecialchars($err['ucasePass']);
-                                      echo htmlspecialchars($err['digPass']);?></label><br>
-            <label>Update Password?</label>
-            <label>yes</label>
-            <input type="radio" name="updatePass" value="yes">
-            <label>no</label>
-            <input type="radio"  name="updatePass"  checked value="no">
-            
-            <input type="submit" value="Update"><br>
-            </div>
-            </div>  
-             
-        </form>
-         
-    </body>
-</html>
+                        <input type="text" name="lName" value="<?php echo htmlspecialchars($currUser->getLName()); ?>">
+                        <label class="err"><?php echo htmlspecialchars($err['lName']); ?></label><br><br>
+
+                        <label>Email Address:</label>
+                        <input type="text" name="email" value="<?php echo htmlspecialchars($currUser->getEmail()); ?>">
+                        <label class="err"><?php echo htmlspecialchars($err['noEmail']); ?></label><br><br>
+                        <label>Password<label>
+                                <input type="text" name="password">
+                                <label class="err"><?php
+                                    echo htmlspecialchars($err['shortPass']);
+                                    echo htmlspecialchars($err['lcasePass']);
+                                    echo htmlspecialchars($err['ucasePass']);
+                                    echo htmlspecialchars($err['digPass']);
+?></label><br>
+                                <label>Update Password?</label>
+                                <label>yes</label>
+                                <input type="radio" name="updatePass" value="yes">
+                                <label>no</label>
+                                <input type="radio"  name="updatePass"  checked value="no">
+
+                                <input type="submit" value="Update"><br>
+                                </div>
+                                </div>  
+
+                                </form>
+
+                                </body>
+                                </html>

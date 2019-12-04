@@ -3,55 +3,53 @@
 w3schoolbootstrap 
 -->
 <?php
-
-  
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-              <link href="Bakery.css" rel="stylesheet"/>
-               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="Bakery.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <title></title>
     </head>
     <body>
-         <form action="index.php" method="post">
+        <form action="index.php" method="post">
             <input type="hidden" name="action" value="add" />
- 
-        <div class="center">
-<div>
-    <div class="jumbotron jumbotron-fluid">
-        <aside>
 
-            <ul>
-                <ul>
-                    <a href="index.php?action=viewHome"> Home </a>
+            <div class="center">
+                <div>
+                    <div class="jumbotron jumbotron-fluid">
+                        <aside>
 
-                </ul>
-            </ul>
-        </aside>
-       
-    <h1><?php echo htmlspecialchars($sweet['sweetsName']);  ?></h1>      
-    </div>
+                            <ul>
+                                <ul>
+                                    <a href="index.php?action=viewHome"> Home </a>
 
-<div>
-       <p> <img src="images/<?php echo htmlspecialchars($sweet['sweetsCode']); ?>.jpg"</p>
-</div>
-<div>
+                                </ul>
+                            </ul>
+                        </aside>
 
-<div>
-      <p><b>Your Price:</b>
-          
-        <?php echo '$' .  htmlspecialchars($sweet['listPrice']); ?></p>
-   
-     
-       
+                        <h1><?php echo htmlspecialchars($sweet['sweetsName']); ?></h1>      
+                    </div>
 
-    <input type="submit" value="Your goddie" />
-        </div>
-</div>
-    </form>
-    
-</div>
-    </body>
-    </html>
+                    <div>
+                        <p> <img src="images/<?php echo htmlspecialchars($sweet['sweetsCode']); ?>.jpg"</p>
+                    </div>
+                    <div>
+
+                        <div>
+                            <p><b>Your Price:</b>
+
+<?php echo '$' . htmlspecialchars($sweet['listPrice']); ?></p>
+
+
+
+
+                            <input type="submit" value="Your goddie" />
+                        </div>
+                    </div>
+                    </form>
+
+                </div>
+                </body>
+                </html>

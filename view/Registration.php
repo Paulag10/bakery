@@ -89,7 +89,7 @@ if (!isset($err['fNamefirstchar'])) {
             <img src="images/Rustic.jpg" style="width:10%">
             <img src="images/Smores.jpg" style="width:10%">
             <img src="images/Oreo-Truffles.jpg" style="width:10%">
-           <img src="images/Rustic.jpg" style="width:10%">
+            <img src="images/Rustic.jpg" style="width:10%">
             <img src="images/Smores.jpg" style="width:10%">
             <img src="images/Oreo-Truffles.jpg" style="width:10%">
 
@@ -144,7 +144,7 @@ if (!isset($err['fNamefirstchar'])) {
                             ?></label><br>
 
                         <input type="submit" value="SIGNUP"> 
-<!--                        ///<p>Have an Account? <a href="../index.php?action=logIn"> Login Now!</a></p>-->
+
                     </div>
                 </div>
             </div>

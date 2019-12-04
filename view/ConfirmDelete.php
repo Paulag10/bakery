@@ -19,7 +19,7 @@ and open the template in the editor.
         <br>
         <a href="?action=viewAllUsers"> View All Users </a>
         <br>
-        
+
 
     </body>
 </html>

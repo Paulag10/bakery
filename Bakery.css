@@ -81,7 +81,14 @@ input[type="submit"]:hover {
 }
 
 input[type="submit"] {
-    margin: 2em 0;
+    margin: 5em 0;
+   
+    text-align: center;
+    content: center;
+    width: 10%;
+   
+    height:10%;
+    border: 1px solid
 }
 img.avatars {
   width: 5%;

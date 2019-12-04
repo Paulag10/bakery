@@ -15,7 +15,7 @@ and open the template in the editor.
         <form>
             <h1> Contact Me </h1>
             <ul>
-              
+
                 <li><a href="../index.php?action=default"> Home </a></li>
 
             </ul>
@@ -38,5 +38,5 @@ and open the template in the editor.
             </div>
         </form>
     </body>
-    
+
 </html>
