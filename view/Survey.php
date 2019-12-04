@@ -60,7 +60,7 @@
                         <form action="index.php" method="POST">
                             <input type="hidden" name="action"
                                    value="Log_survey">
-                            <input type="submit" value="Select">
+                            <input type="submit" value="Select" style="width: 80%;">
                         </form>
 
                     </div>

@@ -45,7 +45,7 @@ w3schoolbootstrap
 
 
 
-                            <input type="submit" value="Your goddie" />
+                            <input type="submit" value="Your goddie" style="width: 80%;" />
                         </div>
                     </div>
                     </form>

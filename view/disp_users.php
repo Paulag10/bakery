@@ -35,7 +35,7 @@
                                    value="delete_User">
                             <input type="hidden" name="uName"
                                    value="<?php echo $user['uName']; ?>">
-                            <input type="submit" value="Delete">
+                            <input type="submit" value="Delete" style="width: 100%;">
                         </form></td>
 
 

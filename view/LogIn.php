@@ -48,7 +48,7 @@ if (!isset($loginUName)) {
                     <label> Password </label> 
                     <input class="forms" type="password" name="loginPassword" required><br>
 
-                    <input class="sub" type="submit" value="Submit"><br>
+                    <input class="sub" type="submit" value="Submit" style="width: 80%"><br>
                     <p> Not Yet a member!
                         <a href="index.php?action=register"> Join Us </a></p>
                 </div>
