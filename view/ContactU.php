@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <link   href="../Bakery.css" rel="stylesheet">
+        <link href="../Bakery.css" rel="stylesheet">
         <title></title>
     </head>
     <body>

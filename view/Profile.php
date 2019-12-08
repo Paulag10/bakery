@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 
-    <head>'
+    <head>
 
         <title>Paula's Sweets </title>
         <link href="Bakery.css" rel="stylesheet"/>

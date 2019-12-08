@@ -13,8 +13,7 @@
 
         <div class="container">
             <h2>Upcoming Events</h2>
-            <p>Please join us for an Event.</p> 
-            <li><a href="index.php?action=viewAdminHome"> Home </a></li>
+          <li><a href="index.php?action=viewAdminHome"> Home </a></li>
             <table class="table table-striped">
                 <thead>
                     <tr>

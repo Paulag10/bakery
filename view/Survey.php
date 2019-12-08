@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="jumbotron text-center">
-        <h1> Paula Sweets Survey <img src="images/Cupcake.jpg" alt="Avatar" class="avatars">
+        <h1> Paula's Sweets Survey <img src="images/Cupcake.jpg" alt="Avatar" class="avatars">
         </h1>
     </div>
     <ul>
