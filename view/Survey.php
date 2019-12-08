@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <title>Survey</title>
         <meta charset="utf-8">

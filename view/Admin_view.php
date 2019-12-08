@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
     <head>
         <meta charset="UTF-8">
         <link href="Bakery.css" rel="stylesheet"/>
@@ -13,7 +14,7 @@
     </head>
     <body>
 
-        <h1> Paula Sweets  <img src="images/Cupcake.jpg" alt="Avatar" class="avatars">
+        <h1> Paula's Sweets  <img src="images/Cupcake.jpg" alt="Avatar" class="avatars">
         </h1>
 
         <ul>

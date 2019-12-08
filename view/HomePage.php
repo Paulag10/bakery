@@ -3,7 +3,7 @@
 w3schoolbootstrap 
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <title>Home Page</title>
         <meta charset="utf-8">
@@ -17,7 +17,7 @@ w3schoolbootstrap
     <body>
 
         <div class="jumbotron text-center">
-            <h1> Paula Sweets  <img src="images/Cupcake.jpg" alt="Avatar" class="avatars">
+            <h1> Paula's Sweets  <img src="images/Cupcake.jpg" alt="Avatar" class="avatars">
             </h1>
         </div>
         <ul>

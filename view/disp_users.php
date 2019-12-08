@@ -1,9 +1,7 @@
 
 <!DOCTYPE html>
 <html>
-
-
-    <head>
+<head>
         <title>Sweets</title>
         <link rel="stylesheet" type="text/css" href="Bakery.css" />
     </head>
