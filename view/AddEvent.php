@@ -1,10 +1,10 @@
 <?php {
     ?>
 
- <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
             <title>Add Events</title>
             <link rel="stylesheet" type="text/css" href="Bakery.css"/>
             <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">

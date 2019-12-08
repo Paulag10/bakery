@@ -42,11 +42,6 @@ and open the template in the editor.
             <p> <img src="images/youGotMail.png"style="width:40%" > 
             </p>
 
-
-
-
         </div>
-
-        
-        </body>
+    </body>
 </html>

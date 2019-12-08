@@ -135,7 +135,7 @@ if (!isset($err['fNamefirstchar'])) {
                             ?></label><br>
 
                         <label>Password</label>
-                        <input type="text" name="password" value="<?php echo htmlspecialchars($password); ?>">
+                        <input type="password" name="password" value="<?php echo htmlspecialchars($password); ?>">
                         <label class="err"><?php
                             echo htmlspecialchars($err['shortPass']);
                             echo htmlspecialchars($err['lcasePass']);
