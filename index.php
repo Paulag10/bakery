@@ -140,9 +140,8 @@ switch ($action) {
             $sweets = sweetDB::get_sweetsType($sweetType);
             include('view/Profile.php');
         }
-        break;
         die();
-
+        break;
 
     case 'viewAllUsers':
 
@@ -154,16 +153,16 @@ switch ($action) {
     case 'viewAllEvents':
        $event = sweetDB::getAllEvents();
         include 'view/events_delete.php';
+         die();
         break;
-        die();
         
     case 'viewAllSurveys':
 
         $survey = user_db::getAllSurveys();
 
         include 'view/viewAllSurveys.php';
+         die();
         break;
-    die();
         
 
     case 'view_sweets':
@@ -174,16 +173,16 @@ switch ($action) {
 
         include('view/Profile_view.php');
 
+         die();
         break;
-        die();
 
     case 'events':
 
         $event = sweetDB::getAllEvents();
         include 'view/events.php';
 
-        break;
         die();
+        break;
 
       case 'update':
         $options = [
@@ -263,15 +262,15 @@ switch ($action) {
         echo $user_id;
         user_db::delete_users($user_id);
         include 'view/ConfirmDelete.php';
-        break;
         die();
+        break;
     case 'delete_event':
         $eventID = filter_input(INPUT_POST, 'eventID');
       echo $eventID;
         user_db::delete_events($eventID);
         include 'view/Admin_view.php';
+         die();
         break;
-        die();
         
   case 'select':
      
@@ -287,24 +286,24 @@ switch ($action) {
         break;
       
     case 'add_event':
+            $eventName = filter_input(INPUT_POST, 'eventName');
 
         $eventCode = filter_input(INPUT_POST, 'eventCode');
-        $eventName = filter_input(INPUT_POST, 'eventName');
-        $eventDiscription = filter_input(INPUT_POST, 'eventDiscription');
         $eventLocation = filter_input(INPUT_POST, 'eventLocation');
         $eventTime = filter_input(INPUT_POST, 'eventTime');
+         $eventDiscription = filter_input(INPUT_POST, 'eventDiscription');
         $eventCost = filter_input(INPUT_POST, 'eventCost');
-        if (empty($eventCode) || empty($eventName) ||
+        if (empty($eventName) || empty($eventCode) ||
                 empty($eventDiscription) || empty($eventLocation) || empty($eventTime) || empty($eventCost)) {
             
         } else {
-            $f = new event($eventCode, $eventName, $eventDiscription, $eventLocation, $eventTime, $eventCost);
+            $f = new event($eventName, $eventCode,$eventLocation,  $eventTime, $eventDiscription,  $eventCost);
             user_db::addEvent($f);
         }
 
         include 'view/Admin_view.php';
-        break;
         die();
+        break;
         
     case 'add':
       
@@ -312,12 +311,12 @@ switch ($action) {
       $selectedUser = User_db::get_user($_SESSION['uName']);
       
      include 'view/Thankyou_view.php';
+       die();
         break;
-        die();
     case 'viewAdminHome':
         include 'view/Admin_view.php';
+        die();
         break;
-    die();
     case 'viewHome':
         include 'view/ProfileHome.php';
         die();
@@ -331,8 +330,8 @@ switch ($action) {
     case 'Survey':
         include 'view/Survey.php';
       
-        break;
          die();
+        break;
          
     case 'Log_survey':
         $date_forSurvey = date("Y-m-d");
@@ -352,8 +351,8 @@ switch ($action) {
 
         
         include 'view/ProfileHome.php';
-        break;
         die();
+        break;
         
         case'leave_comment':
             $fk_user = filter_input(INPUT_POST, 'fk_user');
@@ -385,9 +384,10 @@ switch ($action) {
         $_SESSION['uName'] = "";
         include 'view/HomePage.php';
 
-        break;
         die();
+        break;
 }
+
 ?>
 
 

@@ -32,7 +32,7 @@
                             <td><img src="images/<?php echo htmlspecialchars($e['eventCode']); ?>.jpg"</td>
                             <td><?php echo $e['eventName']; ?></td>
                             <td><?php echo $e['eventDiscription']; ?></td>
-                            <td><?php echo $e['eventLocation'] ?> .<?php echo $e['eventTime'] ?> </td>
+                            <td><?php echo $e['eventLocation'] ?> <?php$e['eventTime'] ?> </td>
                             <td><?php echo $e['eventCost']; ?></td>
 
                             <td>  <form action="index.php" method="POST">

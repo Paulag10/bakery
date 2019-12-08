@@ -110,7 +110,7 @@ $currUser = user_db::get_user($_SESSION['uName']);
                                 <label>no</label>
                                 <input type="radio"  name="updatePass"  checked value="no">
 
-                                <input type="submit" value="Update"><br>
+                                <input type="submit" value="Update" style="width: 80%"><br>
                                 </div>
                                 </div>  
 

@@ -12,7 +12,7 @@
     <body>
 
         <div class="container">
-            <h2>All users surveys</h2>
+            <h1>All users surveys</h1>
 
             <li><a href="index.php?action=viewAdminHome"> Home </a></li>
             <table class="table table-striped">
