@@ -11,7 +11,7 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Sweets</title>
-        <script src="https://bootstrapcreative.com/wp-bc/wp-content/themes/wp-bootstrap/codepen/bootstrapcreative.js?v=1"></script>
+<!--        <script src="https://bootstrapcreative.com/wp-bc/wp-content/themes/wp-bootstrap/codepen/bootstrapcreative.js?v=1"></script>-->
 
         <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css'>
 
@@ -53,13 +53,6 @@ and open the template in the editor.
 
 
     </div>
-
-
-
-
-
-
-
 
 </body>
 </html>
