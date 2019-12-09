@@ -31,10 +31,7 @@ if ($action == null) {
 }
 
 switch ($action) {
-    case 'default':
-        include ('view/HomePage.php');
-
-        die();
+   
 
     case 'register':
         $options = [
@@ -378,6 +375,12 @@ switch ($action) {
     case 'logOut':
         $_SESSION['uName'] = "";
         include 'view/HomePage.php';
+
+        die();
+        break;
+    
+     case 'default':
+        include ('view/HomePage.php');
 
         die();
         break;
