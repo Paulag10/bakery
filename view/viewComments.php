@@ -10,7 +10,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
-</head>
+
 <body>
     <div class="jumbotron text-center">
         <h1> Admin Comments <img src="images/Cupcake.jpg" alt="Avatar" class="avatars">

@@ -245,7 +245,7 @@ public static function addEvent($f) {
         return $comments0;
     }
 
-    public static function add_comment($commentTo, $commentFrom, $commentText, $commentDate) 
+    public static function add_comment($commentFrom, $commentTo, $commentText, $commentDate) 
             {
          $db = DatabaseConnection::getDB();
           $query = 'INSERT INTO comments
@@ -254,8 +254,9 @@ public static function addEvent($f) {
                  (:commentFrom, :commentTo, :commentText, :commentDate)';
 
         $statement = $db->prepare($query);
-        $statement->bindValue(':commentTo', $commentTo);
+        
         $statement->bindValue(':commentFrom', $commentFrom);
+        $statement->bindValue(':commentTo', $commentTo);
         $statement->bindValue(':commentText', $commentText);
         $statement->bindValue(':commentDate', $commentDate);
 

@@ -355,7 +355,7 @@ switch ($action) {
         break;
         
         case'leave_comment':
-            $fk_user = filter_input(INPUT_POST, 'fk_user');
+        $fk_user = filter_input(INPUT_POST, 'fk_user');
         $_SESSION['fk_user'] = $fk_user;
          user_db::select_servey($fk_user);
         
@@ -370,10 +370,11 @@ switch ($action) {
         $commentDate = date("Y-m-d H:i:s");
        $commentTo = $_SESSION['fk_user'];
        $commentFrom = $_SESSION['uName'];
-       $comments = filter_input(INPUT_POST, 'comments');
-        $selectedComment =  user_db::add_comment($commentTo, $commentFrom, $comments, $commentDate);
+       $commentText = filter_input(INPUT_POST, 'comment');
+       $selectedComment = user_db::add_comment($commentFrom, $commentTo, $commentText, $commentDate);
       
-        $user = user_db::get_user($comments);
+          
+
           include 'view/Thankyou_view2.php';
 
         die();
